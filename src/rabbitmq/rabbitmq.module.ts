@@ -1,30 +1,31 @@
-import { Module } from '@nestjs/common';
-import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
-import { ConfigService } from '@nestjs/config';
+import { RabbitMQModule } from "@golevelup/nestjs-rabbitmq";
+import { Module } from "@nestjs/common";
+import { ConfigModule } from "@nestjs/config";
+import { RabbitmqService } from "./rabbitmq.service";
 
 @Module({
     imports: [
-        RabbitMQModule.forRootAsync(RabbitMQModule, {
-            useFactory: (configService: ConfigService) => ({
-                exchanges: [
-                    {
-                        name: 'orders-exchange',
-                        type: 'direct',
-                    },
-                ],
-                queues: [
-                    {
-                        name: 'orders-queue',
-                        createQueueIfNotExists: true,
-                        exchange: 'orders-exchange'
-                    }
-                ],
-                uri: process.env.RABBITMQ_URI,
-                enableControllerDiscovery: true
-            }),
-            inject: [ConfigService]
+        ConfigModule.forRoot({ isGlobal: true }),
+        RabbitMQModule.forRoot(RabbitMQModule, {
+            exchanges: [
+                {
+                    name: 'orders-exchange',
+                    type: 'direct',
+                    createExchangeIfNotExists: true
+                }
+            ],
+            queues: [
+                {
+                    name: 'orders-queue',
+                    createQueueIfNotExists: true,
+                    exchange: 'orders-exchange'
+                }
+            ],
+            uri: process.env.RABBITMQ_URI,
+            enableControllerDiscovery: true
         })
     ],
-    exports: [RabbitMQModule]
+    providers: [RabbitmqService],
+    exports: [RabbitmqService]
 })
 export class RabbitmqModule {}

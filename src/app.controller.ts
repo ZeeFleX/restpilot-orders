@@ -8,10 +8,10 @@ export class AppController {
 
   @RabbitRPC({
     exchange: 'orders-exchange',
-    routingKey: 'orders.test',
-    queue: 'orders-queue'
+    routingKey: 'orders.testWithOrders',
+    queue: 'orders.testWithOrders',
   })
-  async test(data: any) {
-    return this.appService.test(data);
+  async testWithOrders(data: any) {
+    return this.appService.testWithOrders(data);
   }
 }

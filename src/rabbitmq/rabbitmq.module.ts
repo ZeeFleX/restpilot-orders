@@ -1,28 +1,9 @@
-import { RabbitMQModule } from "@golevelup/nestjs-rabbitmq";
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { RabbitmqService } from "./rabbitmq.service";
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
-    RabbitMQModule.forRoot(RabbitMQModule, {
-      exchanges: [
-        {
-          name: "orders-exchange",
-          type: "direct",
-          createExchangeIfNotExists: true,
-        },
-        {
-          name: "auth-exchange",
-          type: "direct",
-          createExchangeIfNotExists: true,
-        },
-      ],
-      uri: process.env.RABBITMQ_URI,
-      enableControllerDiscovery: true,
-    }),
-  ],
+  imports: [ConfigModule.forRoot({ isGlobal: true })],
   providers: [RabbitmqService],
   exports: [RabbitmqService],
 })

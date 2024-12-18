@@ -361,40 +361,6 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@golevelup/nestjs-common@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@golevelup/nestjs-common/-/nestjs-common-2.0.1.tgz#9aad3a637491be64ff8ec55826b09f5681744d1b"
-  integrity sha512-XYi6K1ITNwIyH/nGNPaaQlZ6bEwvHuUe5OBTFhCCesDk0ibFXHaO+UoLD6iHQz7qDWmqzwiY0DkhujvE+S5z8g==
-  dependencies:
-    lodash "^4.17.21"
-    nanoid "^3.3.7"
-
-"@golevelup/nestjs-discovery@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@golevelup/nestjs-discovery/-/nestjs-discovery-4.0.2.tgz#dfc2d30c86e4fe9e247d9c3aef148327bc8b8bfc"
-  integrity sha512-0JRJe4KpONdQ2U+ajteHrc71LgYzAR70KEzwI+9EDogK+ufn2VVn5qpDg+z85MhxaB3EEFLsAx0uDx98wqswuQ==
-  dependencies:
-    lodash "^4.17.21"
-
-"@golevelup/nestjs-modules@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@golevelup/nestjs-modules/-/nestjs-modules-0.7.1.tgz#2b8d057343d785de9ebb8ec2ad8829e8df075a6c"
-  integrity sha512-L5hBuU57ujl73IAyyZYkT+41tbo+9BggLzze7AMSWJhNUJBhvifFvtfSNRy2aTTPsLYuHLH2tmerjjOQkEdgDg==
-  dependencies:
-    lodash "^4.17.21"
-
-"@golevelup/nestjs-rabbitmq@^5.6.1":
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/@golevelup/nestjs-rabbitmq/-/nestjs-rabbitmq-5.6.1.tgz#8fb75ab5606154948c8076d6af10be6186d4f771"
-  integrity sha512-P7U/Ry7FLEu6skIRJvomc29oIVqjIWyse5Kh5Dy2ZBsvXZmg4/OyHJfIQtNRA/4xVt2E3oDMT3gxPIbR8WR4FA==
-  dependencies:
-    "@golevelup/nestjs-common" "^2.0.1"
-    "@golevelup/nestjs-discovery" "^4.0.2"
-    "@golevelup/nestjs-modules" "^0.7.1"
-    amqp-connection-manager "^4.1.14"
-    amqplib "^0.10.4"
-    lodash "^4.17.21"
-
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.13.0.tgz#fb907624df3256d04b9aa2df50d7aa97ec648748"
@@ -1421,7 +1387,7 @@ amqp-connection-manager@^4.1.14:
   dependencies:
     promise-breaker "^6.0.0"
 
-amqplib@^0.10.4, amqplib@^0.10.5:
+amqplib@^0.10.5:
   version "0.10.5"
   resolved "https://registry.yarnpkg.com/amqplib/-/amqplib-0.10.5.tgz#2b217a3c56f2935ee2e36206bfd7e25ee866491f"
   integrity sha512-Dx5zmy0Ur+Q7LPPdhz+jx5IzmJBoHd15tOeAfQ8SuvEtyPJ20hBemhOBA4b1WeORCRa0ENM/kHCzmem1w/zHvQ==
@@ -3721,11 +3687,6 @@ mute-stream@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-1.0.0.tgz#e31bd9fe62f0aed23520aa4324ea6671531e013e"
   integrity sha512-avsJQhyd+680gKXyG/sQc0nXaC6rBkPOfyHYcFb9+hdkqQkR9bdnkJ0AMZhke0oesPqIO+mFFJ+IdBc7mst4IA==
-
-nanoid@^3.3.7:
-  version "3.3.8"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.8.tgz#b1be3030bee36aaff18bacb375e5cce521684baf"
-  integrity sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==
 
 natural-compare@^1.4.0:
   version "1.4.0"

@@ -1,9 +1,7 @@
-import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { DatabaseModule } from './database/database.module';
-import { RabbitmqModule } from './rabbitmq/rabbitmq.module';
+import { Module } from "@nestjs/common";
+import { ConfigModule } from "@nestjs/config";
+import { DatabaseModule } from "./database/database.module";
+import { RabbitmqModule } from "./rabbitmq/rabbitmq.module";
 
 @Module({
   imports: [
@@ -13,7 +11,7 @@ import { RabbitmqModule } from './rabbitmq/rabbitmq.module';
     DatabaseModule,
     RabbitmqModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
